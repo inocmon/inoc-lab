@@ -1,0 +1,44 @@
+{
+  "huawei-ne40e-v800r011c00spc607b607": {
+    "vendor": "huawei",
+    "path": "images/functional/huawei/NE40E-V800R011C00SPC607B607.qcow2",
+    "memory": 1024,
+    "vcpus": 1
+  },
+  "huawei-ar1000v-5.170": {
+    "vendor": "huawei",
+    "path": "images/functional/huawei/huawei-ar1000v-5.170.qcow2",
+    "memory": 1024,
+    "vcpus": 1
+  },
+  "mikrotik-6.49.13": {
+    "vendor": "mikrotik",
+    "path": "images/functional/mikrotik/mikrotik-6.49.13.qcow2",
+    "memory": 64,
+    "vcpus": 1
+  },
+  "juniper-vrr-21.4R1.12": {
+    "vendor": "juniper",
+    "path": "images/functional/juniper/junos-x86-64-21.4R1.12.img",
+    "memory": 1024,
+    "vcpus": 1
+  },
+  "nokia-sros-vsim": {
+    "vendor": "nokia",
+    "path": "images/functional/nokia/sros-vsim.qcow2",
+    "memory": 6144,
+    "vcpus": 2
+  },
+  "linux-debian12-minimal": {
+    "vendor": "linux",
+    "path": "images/functional/linux/debian12-minimal.qcow2",
+    "memory": 512,
+    "vcpus": 1
+  },
+  "linux-ubuntu2204": {
+    "vendor": "linux",
+    "path": "images/functional/linux/ubuntu2204.qcow2",
+    "memory": 1024,
+    "vcpus": 1
+  }
+}

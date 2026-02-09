@@ -1,0 +1,23 @@
+[Unit]
+Description=Inoc Lab Manager API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/inoc-lab
+EnvironmentFile=-/opt/inoc-lab/.env
+Environment=LAB_ROOT=/opt/inoc-lab
+Environment=CATALOG_DIR=/opt/inoc-lab/catalog
+Environment=TOPOLOGY_DIR=/opt/inoc-lab/topologies
+Environment=VM_BASE=/opt/inoc-lab/vms
+Environment=STATE_DIR=/opt/inoc-lab/state
+Environment=INSTANCES_DIR=/opt/inoc-lab/instances
+ExecStart=/usr/bin/inoc-lab-manager --env /opt/inoc-lab/.env
+Restart=always
+RestartSec=2
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

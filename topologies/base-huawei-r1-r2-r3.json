@@ -1,0 +1,24 @@
+{
+  "id": "base-huawei-r1-r2-r3",
+  "asn": 65001,
+  "nodes": [
+    {
+      "id": "r1",
+      "vendor": "huawei",
+      "image": "huawei-ne40e-v800r011c00spc607b607"
+    },
+    {
+      "id": "r2",
+      "vendor": "huawei",
+      "image": "huawei-ne40e-v800r011c00spc607b607"
+    }
+  ],
+  "links": [
+    {
+      "a": "r1",
+      "b": "r2"
+    }
+  ],
+  "console_port_base": 20000,
+  "server_id": "-OkPLZr4kCyNr-cD8Ve3"
+}

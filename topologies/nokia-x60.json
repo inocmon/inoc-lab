@@ -1,0 +1,1328 @@
+{
+  "id": "nokia-x60",
+  "asn": 65001,
+  "console_port_base": 20000,
+  "nodes": [
+    {
+      "id": "r1",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 34.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r2",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 103.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r3",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 172.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r4",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 241.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r5",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 310.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r6",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 379.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r7",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 448.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r8",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 517.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r9",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 586.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r10",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 655.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r11",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 724.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r12",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 793.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r13",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 862.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r14",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 931.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r15",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1000.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r16",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1069.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r17",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1138.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r18",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1207.5,
+        "y": 34.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r19",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 34.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r20",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 103.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r21",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 172.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r22",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 241.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r23",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 310.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r24",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 379.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r25",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 448.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r26",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 517.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r27",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 586.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r28",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 655.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r29",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 724.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r30",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 793.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r31",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 862.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r32",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 931.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r33",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1000.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r34",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1069.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r35",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1138.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r36",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1207.5,
+        "y": 103.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r37",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 34.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r38",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 103.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r39",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 172.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r40",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 241.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r41",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 310.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r42",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 379.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r43",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 448.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r44",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 517.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r45",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 586.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r46",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 655.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r47",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 724.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r48",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 793.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r49",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 862.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r50",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 931.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r51",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1000.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r52",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1069.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r53",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1138.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r54",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1207.5,
+        "y": 172.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r55",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 34.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r56",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 103.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r57",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 172.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r58",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 241.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r59",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 310.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r60",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 379.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r61",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 448.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r62",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 517.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r63",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 586.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r64",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 655.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r65",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 724.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r66",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 793.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r67",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 862.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r68",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 931.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r69",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1000.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r70",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1069.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r71",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1138.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r72",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1207.5,
+        "y": 241.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r73",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 34.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r74",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 103.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r75",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 172.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r76",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 241.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r77",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 310.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r78",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 379.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r79",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 448.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r80",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 517.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r81",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 586.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r82",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 655.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r83",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 724.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r84",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 793.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r85",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 862.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r86",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 931.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r87",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1000.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r88",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1069.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r89",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1138.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r90",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1207.5,
+        "y": 310.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r91",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 34.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r92",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 103.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r93",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 172.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r94",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 241.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r95",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 310.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r96",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 379.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r97",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 448.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r98",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 517.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r99",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 586.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r100",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 655.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r101",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 724.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r102",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 793.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r103",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 862.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r104",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 931.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r105",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1000.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r106",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1069.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r107",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1138.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r108",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 1207.5,
+        "y": 379.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r109",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 34.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r110",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 103.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r111",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 172.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r112",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 241.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r113",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 310.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r114",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 379.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r115",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 448.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r116",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 517.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r117",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 586.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r118",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 655.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r119",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 724.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r120",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 793.5,
+        "y": 448.5
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,63 @@
+{
+  "id": "nokia2",
+  "asn": 65001,
+  "console_port_base": 20000,
+  "links": [
+    {
+      "a": "r1",
+      "a_port": "LAB-65001-R1-e1",
+      "b": "r2",
+      "b_port": "LAB-65001-R2-e1",
+      "id": "link-r1--r2-1"
+    },
+    {
+      "a": "r1",
+      "a_port": "Ethernet1/0/0",
+      "b": "r3",
+      "b_port": "Ethernet1/0/0",
+      "id": "link-r1--r3-1"
+    },
+    {
+      "a": "r3",
+      "a_port": "Ethernet1/0/1",
+      "b": "r2",
+      "b_port": "Ethernet1/0/0",
+      "id": "link-r2--r3-1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r1",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": -763.1379237758123,
+        "y": 98.11610964425962
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r2",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": -400.0452960401949,
+        "y": 94.64104991911204
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r3",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": -567.9757634878763,
+        "y": -44.7465162370373
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    }
+  ]
+}

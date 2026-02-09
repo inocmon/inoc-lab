@@ -1,0 +1,38 @@
+{
+  "id": "nokiaa",
+  "asn": 65001,
+  "console_port_base": 20000,
+  "links": [
+    {
+      "a": "r1",
+      "a_port": "e1",
+      "b": "r2",
+      "b_port": "Ethernet1/0/0",
+      "id": "link-r1--r2-1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r1",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": -26.17670618075737,
+        "y": -114.43306307817126
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r2",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 255.52130539700522,
+        "y": -109.74520867038346
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    }
+  ]
+}

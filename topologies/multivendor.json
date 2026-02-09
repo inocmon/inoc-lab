@@ -1,0 +1,120 @@
+{
+  "id": "multivendor",
+  "asn": 65002,
+  "console_port_base": 20000,
+  "links": [
+    {
+      "a": "r5",
+      "a_port": "e1",
+      "b": "r2",
+      "b_port": "ether6",
+      "id": "link-r2--r5-1"
+    },
+    {
+      "a": "r2",
+      "a_port": "ether4",
+      "b": "r3",
+      "b_port": "ether4",
+      "id": "link-r2--r3-2"
+    },
+    {
+      "a": "r1",
+      "a_port": "e1",
+      "b": "r2",
+      "b_port": "ether1",
+      "id": "link-r1--r2-1"
+    },
+    {
+      "a": "r1",
+      "a_port": "e2",
+      "b": "r2",
+      "b_port": "ether2",
+      "id": "link-r1--r2-2"
+    },
+    {
+      "a": "r1",
+      "a_port": "e3",
+      "b": "r3",
+      "b_port": "ether1",
+      "id": "link-r1--r3-1"
+    },
+    {
+      "a": "r1",
+      "a_port": "e4",
+      "b": "r3",
+      "b_port": "ether2",
+      "id": "link-r1--r3-2"
+    },
+    {
+      "a": "r2",
+      "a_port": "ether3",
+      "b": "r3",
+      "b_port": "ether3",
+      "id": "link-r2--r3-1"
+    },
+    {
+      "a": "r2",
+      "a_port": "ether5",
+      "b": "r5-1",
+      "b_port": "ens2",
+      "id": "link-r2--r5-1-1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r1",
+      "image": "juniper-vrr-21.4R1.12",
+      "memory": 1024,
+      "position": {
+        "x": 311.5325938616081,
+        "y": 282.99965337262876
+      },
+      "vcpus": 1,
+      "vendor": "juniper"
+    },
+    {
+      "id": "r2",
+      "image": "mikrotik-chr-7.21.2.img",
+      "memory": 64,
+      "position": {
+        "x": 601.7995840471546,
+        "y": 96.12066552455279
+      },
+      "vcpus": 1,
+      "vendor": "mikrotik"
+    },
+    {
+      "id": "r3",
+      "image": "mikrotik-chr-7.21.2.img",
+      "memory": 64,
+      "position": {
+        "x": 816.1203188971814,
+        "y": 286.412968219169
+      },
+      "vcpus": 1,
+      "vendor": "mikrotik"
+    },
+    {
+      "id": "r5",
+      "image": "nokia-sros-vsim",
+      "memory": 6144,
+      "position": {
+        "x": 296.0887647082708,
+        "y": 174.12307386103367
+      },
+      "vcpus": 2,
+      "vendor": "nokia"
+    },
+    {
+      "id": "r5-1",
+      "image": "linux-debian12-minimal-inoc-fw.qcow2",
+      "memory": 512,
+      "position": {
+        "x": 891.777688412293,
+        "y": 96.17193229542099
+      },
+      "vcpus": 1,
+      "vendor": "linux"
+    }
+  ]
+}

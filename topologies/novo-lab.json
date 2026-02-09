@@ -1,0 +1,25 @@
+{
+  "id": "novo-lab",
+  "asn": 65001,
+  "console_port_base": 20000,
+  "links": [
+    {
+      "a": "r1",
+      "b": "r2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r1",
+      "image": "huawei-ne40e-v800r011c00spc607b607",
+      "vendor": "huawei"
+    },
+    {
+      "id": "r2",
+      "image": "huawei-ne40e-v800r011c00spc607b607",
+      "memory": 1024,
+      "vcpus": 2,
+      "vendor": "huawei"
+    }
+  ]
+}

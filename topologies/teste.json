@@ -1,0 +1,81 @@
+{
+  "id": "teste",
+  "asn": 65001,
+  "console_port_base": 20000,
+  "links": [
+    {
+      "a": "r1",
+      "a_port": "LAB-65001-R1-e1",
+      "b": "r2",
+      "b_port": "LAB-65001-R2-e1",
+      "id": "link-r1--r2-1"
+    },
+    {
+      "a": "r2",
+      "a_port": "ether2",
+      "b": "r3",
+      "b_port": "ether2",
+      "id": "link-r2--r3-1"
+    },
+    {
+      "a": "r3",
+      "a_port": "ether1",
+      "b": "r1",
+      "b_port": "LAB-65001-R1-e2",
+      "id": "link-r1--r3-1"
+    },
+    {
+      "a": "r4",
+      "a_port": "ether2",
+      "b": "r1",
+      "b_port": "ether2",
+      "id": "link-r1--r4-1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r1",
+      "image": "mikrotik-6.49.13",
+      "memory": 64,
+      "position": {
+        "x": 403.5038866865199,
+        "y": 266.3157469314763
+      },
+      "vcpus": 1,
+      "vendor": "mikrotik"
+    },
+    {
+      "id": "r2",
+      "image": "mikrotik-6.49.13",
+      "memory": 64,
+      "position": {
+        "x": 682.8693912479445,
+        "y": 126.51922190665991
+      },
+      "vcpus": 1,
+      "vendor": "mikrotik"
+    },
+    {
+      "id": "r3",
+      "image": "mikrotik-6.49.13",
+      "memory": 64,
+      "position": {
+        "x": 771.5380975703891,
+        "y": 260.58050487917615
+      },
+      "vcpus": 1,
+      "vendor": "mikrotik"
+    },
+    {
+      "id": "r4",
+      "image": "mikrotik-chr-7.21.2.img",
+      "memory": 64,
+      "position": {
+        "x": 230.7107419780646,
+        "y": 184.446387312308
+      },
+      "vcpus": 1,
+      "vendor": "mikrotik"
+    }
+  ]
+}
