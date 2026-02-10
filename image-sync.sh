@@ -99,7 +99,7 @@ def download_with_gdown(file_id, target):
         raise RuntimeError("ID do arquivo no Drive nao encontrado.")
     tmp_path = target + ".partial"
     os.makedirs(os.path.dirname(target), exist_ok=True)
-    cmd = ["gdown", "--id", file_id, "-O", tmp_path]
+    cmd = ["gdown", file_id, "-O", tmp_path]
     result = subprocess.run(cmd)
     if result.returncode != 0:
         raise RuntimeError("gdown falhou ao baixar o arquivo.")

@@ -1,3 +1,5 @@
+state/*
+instances/*
 topologies/*
 *.qcow
 *.qcow2
@@ -6,4 +8,5 @@ topologies/*
 *.log
 *.tmp
 .env
+!.gitignore
 !.env.example

@@ -29,9 +29,13 @@
   },
   "nokia-sros-vsim": {
     "vendor": "nokia",
-    "path": "images/functional/nokia/sros-vsim.qcow2",
+    "path": "images/functional/nokia/sros-vsim-timos-b-24-10-r2.qcow2",
     "memory": 6144,
-    "vcpus": 2
+    "vcpus": 2,
+    "download": {
+      "url": "https://drive.google.com/file/d/1-L6X7HjwBVnsVChkWiNmyeSi1jH_G8HD/view?usp=sharing",
+      "sha256": "5d2242d99471e33e77bc9faf910b2ab625461f2a792dac9fe6be0ffb08e5c407"
+    }
   },
   "linux-debian12-minimal": {
     "vendor": "linux",
