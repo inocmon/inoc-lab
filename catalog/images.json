@@ -3,7 +3,11 @@
     "vendor": "huawei",
     "path": "images/functional/huawei/NE40E-V800R011C00SPC607B607.qcow2",
     "memory": 1024,
-    "vcpus": 1
+    "vcpus": 1,
+    "download": {
+      "url": "https://docs.google.com/document/d/1agy-_xFYdyCDp0Ed_q-UbFlbJzojsE_jhgJS9JtH0cg/edit?usp=sharing",
+      "sha256": "47af49f435d74edab10206c0a452e98b17b76606de17746738c006318ecf363b"
+    }
   },
   "huawei-ar1000v-5.170": {
     "vendor": "huawei",
