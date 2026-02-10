@@ -55,6 +55,12 @@ fi
 if command -v systemctl >/dev/null 2>&1; then
   systemctl daemon-reload || true
   systemctl enable "$service_name" || true
+  if [[ -x "$target_root/image-sync.sh" ]]; then
+    echo ">> Sincronizando imagens..."
+    "$target_root/image-sync.sh" || echo "Aviso: falha ao sincronizar imagens."
+  else
+    echo "Aviso: image-sync.sh nao encontrado em $target_root"
+  fi
   systemctl restart "$service_name" || true
 else
   echo "Aviso: systemctl nao encontrado. Instale/ative o servico manualmente."

@@ -142,9 +142,70 @@ def build_opener():
     jar = http.cookiejar.CookieJar()
     return urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
 
-def open_url(opener, url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+def open_url(opener, url, headers=None, method="GET"):
+    base_headers = {"User-Agent": "Mozilla/5.0"}
+    if headers:
+        base_headers.update(headers)
+    req = urllib.request.Request(url, headers=base_headers, method=method)
     return opener.open(req)
+
+def resolve_direct_url(opener, url):
+    resp = open_url(opener, url)
+    try:
+        content_type = resp.headers.get("Content-Type", "")
+        if is_drive_url(url) and "text/html" in content_type:
+            html = resp.read().decode("utf-8", "ignore")
+            download_url = extract_download_url(html)
+            if download_url:
+                return download_url
+            token = extract_confirm_token(html)
+            file_id = extract_drive_id(url, html)
+            if token and file_id:
+                return f"https://drive.google.com/uc?export=download&id={file_id}&confirm={token}"
+            return ""
+        return resp.geturl()
+    finally:
+        try:
+            resp.close()
+        except Exception:
+            pass
+
+def probe_remote_size(url):
+    url = normalize_url(url)
+    opener = build_opener()
+    direct_url = resolve_direct_url(opener, url)
+    if not direct_url:
+        return 0
+    try:
+        resp = open_url(opener, direct_url, headers={"Range": "bytes=0-0"})
+    except Exception:
+        return 0
+    try:
+        content_type = resp.headers.get("Content-Type", "")
+        if is_drive_url(direct_url) and "text/html" in content_type:
+            return 0
+        content_range = resp.headers.get("Content-Range", "")
+        if "/" in content_range:
+            total = content_range.split("/")[-1].strip()
+            if total.isdigit():
+                return int(total)
+        length = resp.headers.get("Content-Length", "")
+        if length and str(length).isdigit():
+            return int(length)
+        return 0
+    finally:
+        try:
+            resp.close()
+        except Exception:
+            pass
+
+def has_disk_space(target, size_bytes):
+    if size_bytes <= 0:
+        return False, 0, 0
+    free = shutil.disk_usage(os.path.dirname(target)).free
+    reserve = max(200 * 1024 * 1024, int(size_bytes * 0.02))
+    needed = size_bytes + reserve
+    return free >= needed, free, needed
 
 def download_file(url, target, sha256=""):
     url = normalize_url(url)
@@ -264,6 +325,15 @@ for image_id, image in images.items():
     url = normalize_url(url)
     if not url:
         print(f"[{image_id}] URL de download vazia.")
+        continue
+
+    size = probe_remote_size(url)
+    if size <= 0:
+        print(f"[{image_id}] Falha: nao foi possivel determinar o tamanho remoto.")
+        continue
+    ok, free, needed = has_disk_space(target, size)
+    if not ok:
+        print(f"[{image_id}] Falha: espaco insuficiente (livre {free/1024/1024:.1f} MB, necessario {needed/1024/1024:.1f} MB).")
         continue
 
     print(f"[{image_id}] Baixando para {target}")
