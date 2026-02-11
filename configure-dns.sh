@@ -5,6 +5,7 @@ domain=""
 api_url=""
 api_token=""
 mode=""
+api_key=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -48,8 +49,8 @@ read_env_value() {
 if [[ -z "$api_url" ]]; then
   api_url="$(read_env_value "LAB_DNS01_API_URL")"
 fi
-if [[ -z "$api_token" ]]; then
-  api_token="$(read_env_value "LAB_DNS01_API_TOKEN")"
+if [[ -z "$api_key" ]]; then
+  api_key="$(read_env_value "API_KEY")"
 fi
 
 if [[ "$mode" == "auth" || "$mode" == "cleanup" ]]; then
@@ -58,8 +59,20 @@ if [[ "$mode" == "auth" || "$mode" == "cleanup" ]]; then
     exit 1
   fi
   if [[ -z "$api_url" || -z "$api_token" ]]; then
-    echo "Erro: LAB_DNS01_API_URL/LAB_DNS01_API_TOKEN nao informados."
-    exit 1
+    if [[ -z "$api_url" ]]; then
+      echo "Erro: LAB_DNS01_API_URL nao informado."
+      exit 1
+    fi
+    if [[ -z "$api_key" ]]; then
+      echo "Erro: API_KEY nao informado no /opt/inoc-lab/.env."
+      exit 1
+    fi
+    token_resp="$(curl -fsS -X POST "${api_url%/}/token" -H "X-API-Key: ${api_key}" -H "Content-Type: application/json" -d '{}' 2>/dev/null || true)"
+    api_token="$(printf "%s" "$token_resp" | sed -n 's/.*"token":"\([^"]*\)".*/\1/p')"
+    if [[ -z "$api_token" ]]; then
+      echo "Erro: falha ao obter token temporario."
+      exit 1
+    fi
   fi
   if [[ "$mode" == "auth" ]]; then
     endpoint="${api_url%/}/start"
@@ -97,9 +110,8 @@ ensure_env_value() {
   fi
 }
 
-if [[ -n "$api_url" && -n "$api_token" ]]; then
+if [[ -n "$api_url" ]]; then
   ensure_env_value "$env_file" "LAB_DNS01_API_URL" "$api_url"
-  ensure_env_value "$env_file" "LAB_DNS01_API_TOKEN" "$api_token"
 fi
 
 ensure_env_value "$env_file" "SSL_CERT" "/etc/letsencrypt/live/${domain}/fullchain.pem"
@@ -109,7 +121,7 @@ ensure_env_value "$env_file" "SSL_CA" "/etc/letsencrypt/live/${domain}/chain.pem
 if [[ -z "$api_url" || -z "$api_token" ]]; then
   echo "SSL paths atualizados em ${env_file}"
   echo "Certificados esperados em /etc/letsencrypt/live/${domain}/"
-  echo "Configure LAB_DNS01_API_URL e LAB_DNS01_API_TOKEN no ${env_file} para gerar via DNS-01."
+  echo "Configure LAB_DNS01_API_URL no ${env_file} para gerar via DNS-01 (token temporario via API_KEY)."
   exit 0
 fi
 
