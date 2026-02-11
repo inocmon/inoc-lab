@@ -97,6 +97,11 @@ ensure_env_value() {
   fi
 }
 
+if [[ -n "$api_url" && -n "$api_token" ]]; then
+  ensure_env_value "$env_file" "LAB_DNS01_API_URL" "$api_url"
+  ensure_env_value "$env_file" "LAB_DNS01_API_TOKEN" "$api_token"
+fi
+
 ensure_env_value "$env_file" "SSL_CERT" "/etc/letsencrypt/live/${domain}/fullchain.pem"
 ensure_env_value "$env_file" "SSL_KEY" "/etc/letsencrypt/live/${domain}/privkey.pem"
 ensure_env_value "$env_file" "SSL_CA" "/etc/letsencrypt/live/${domain}/chain.pem"
