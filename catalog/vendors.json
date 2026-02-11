@@ -21,13 +21,13 @@
     "link_label_skip": [
       "GigabitEthernet0/0/0"
     ],
-    "nic_model": "e1000",
+    "nic_model": "virtio-net-pci",
     "disk_bus": "virtio",
     "os_variant": "centos7.0",
     "machine": "pc-i440fx-6.2",
     "cpu": "host",
     "mgmt_bridge": "virbr0",
-    "mgmt_model": "e1000",
+    "mgmt_model": "virtio-net-pci",
     "serial_mode": "qemu-telnet",
     "disable_pty_console": true
   },
@@ -40,19 +40,19 @@
     "link_nic_position": "after_mgmt",
     "link_label_prefix": "ether",
     "link_label_offset": 0,
-    "nic_model": "e1000",
+    "nic_model": "virtio-net-pci",
     "disk_bus": "ide",
     "os_variant": "ubuntu22.04",
     "machine": "pc-i440fx-6.2",
     "cpu": "host",
     "mgmt_bridge": null,
-    "mgmt_model": "e1000",
+    "mgmt_model": "virtio-net-pci",
     "mgmt_disabled": true,
     "web_forward": {
       "host": "0.0.0.0",
       "host_port_base": 50000,
       "guest_port": 80,
-      "model": "e1000",
+      "model": "virtio-net-pci",
       "place_last": true
     }
   },
