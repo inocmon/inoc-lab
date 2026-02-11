@@ -114,10 +114,15 @@ if ! command -v certbot >/dev/null 2>&1; then
 fi
 
 echo ">> Solicitando certificado wildcard via DNS-01..."
+manual_ip_flag=""
+if certbot certonly --help 2>/dev/null | grep -q -- '--manual-public-ip-logging-ok'; then
+  manual_ip_flag="--manual-public-ip-logging-ok"
+fi
+
 certbot certonly --manual --preferred-challenges dns \
   --manual-auth-hook "${target_root}/configure-dns.sh auth" \
   --manual-cleanup-hook "${target_root}/configure-dns.sh cleanup" \
-  --non-interactive --agree-tos --register-unsafely-without-email --manual-public-ip-logging-ok \
+  --non-interactive --agree-tos --register-unsafely-without-email ${manual_ip_flag} \
   -d "*.${domain}" -d "${domain}"
 
 echo "SSL paths atualizados em ${env_file}"
