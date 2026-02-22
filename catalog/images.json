@@ -23,7 +23,7 @@
   },
   "mikrotik-7.21.2": {
     "vendor": "mikrotik",
-    "path": "images/functional/mikrotik/chr-7.21.2.img",
+    "path": "images/functional/mikrotik/mikrotik-chr-7.21.2.img",
     "memory": 64,
     "vcpus": 1,
     "download": {
