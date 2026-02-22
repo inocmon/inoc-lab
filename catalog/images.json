@@ -21,6 +21,16 @@
     "memory": 64,
     "vcpus": 1
   },
+  "mikrotik-7.21.2": {
+    "vendor": "mikrotik",
+    "path": "images/functional/mikrotik/chr-7.21.2.img",
+    "memory": 64,
+    "vcpus": 1,
+    "download": {
+      "url": "https://drive.google.com/file/d/1DpHJvv0dNiaezEFAWhDYGoQk-dxwldSG/view?usp=sharing",
+      "sha256": "76f4fb43bf36ff52fd068fb8929b6960f700fe33e1a32558fd70a1b5057c5822"
+    }
+  },
   "juniper-vrr-21.4R1.12": {
     "vendor": "juniper",
     "path": "images/functional/juniper/junos-x86-64-21.4R1.12.img",

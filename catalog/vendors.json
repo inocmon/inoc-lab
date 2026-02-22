@@ -104,19 +104,24 @@
     ]
   },
   "cisco-xr": {
-    "default_memory": 2048,
-    "default_vcpus": 2,
+    "default_memory": 8192,
+    "default_vcpus": 8,
     "hidden_nics": 0,
     "link_nic_start": 1,
     "link_nic_max": 8,
     "link_nic_position": "first",
-    "nic_model": "e1000",
+    "link_label_prefix": "Gi0/0/0/",
+    "link_label_offset": -1,
+    "nic_model": "virtio-net-pci",
     "disk_bus": "virtio",
     "os_variant": "generic",
     "machine": "pc-i440fx-6.2",
     "cpu": "host",
     "mgmt_bridge": "virbr0",
-    "mgmt_model": "e1000"
+    "mgmt_model": "e1000",
+    "serial_mode": "qemu-telnet",
+    "disable_pty_console": true,
+    "serial_patch": true
   },
   "linux": {
     "default_memory": 512,
@@ -128,7 +133,6 @@
     "link_label_prefix": "ens",
     "link_label_offset": 2,
     "nic_model": "e1000",
-    "mac_base": "52:54:00:12:34:56",
     "disk_bus": "virtio",
     "os_variant": "ubuntu22.04",
     "machine": "pc-i440fx-6.2",
@@ -140,7 +144,6 @@
       "host": "0.0.0.0",
       "host_port_base": 50000,
       "guest_port": 80,
-      "mac": "52:54:00:12:34:5e",
       "model": "e1000",
       "place_last": false,
       "pci_slot": 11
