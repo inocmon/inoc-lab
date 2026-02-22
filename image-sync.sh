@@ -327,14 +327,20 @@ for image_id, image in images.items():
         print(f"[{image_id}] URL de download vazia.")
         continue
 
-    size = probe_remote_size(url)
-    if size <= 0:
-        print(f"[{image_id}] Falha: nao foi possivel determinar o tamanho remoto.")
-        continue
-    ok, free, needed = has_disk_space(target, size)
-    if not ok:
-        print(f"[{image_id}] Falha: espaco insuficiente (livre {free/1024/1024:.1f} MB, necessario {needed/1024/1024:.1f} MB).")
-        continue
+    try:
+        size = probe_remote_size(url)
+    except Exception as exc:
+        print(f"[{image_id}] Aviso: falha ao consultar tamanho remoto ({exc}).")
+        size = 0
+    if size > 0:
+        ok, free, needed = has_disk_space(target, size)
+        if not ok:
+            print(f"[{image_id}] Falha: espaco insuficiente (livre {free/1024/1024:.1f} MB, necessario {needed/1024/1024:.1f} MB).")
+            continue
+    else:
+        # Alguns provedores (especialmente Google Drive) nao expõem tamanho
+        # confiável na fase de probe. Nesses casos seguimos com o download.
+        print(f"[{image_id}] Aviso: tamanho remoto indisponivel; continuando sem pre-check de espaco.")
 
     print(f"[{image_id}] Baixando para {target}")
     try:
