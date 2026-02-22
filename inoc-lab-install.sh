@@ -63,12 +63,14 @@ restart_service_if_exists() {
 usage_main() {
   cat <<'EOF'
 Uso:
-  /opt/inoc-lab/inoc-lab-install.sh [--url DOMINIO --apikey CHAVE] [--api-url URL_DNS01]
-  /opt/inoc-lab/inoc-lab-install.sh install [--url DOMINIO --apikey CHAVE] [--api-url URL_DNS01]
+  /opt/inoc-lab/inoc-lab-install.sh [--url DOMINIO --apikey CHAVE] [--api-url URL_DNS01] [--skip-dns]
+  /opt/inoc-lab/inoc-lab-install.sh install [--url DOMINIO --apikey CHAVE] [--api-url URL_DNS01] [--skip-dns]
   /opt/inoc-lab/inoc-lab-install.sh dns --name DOMINIO [--api-url URL_DNS01] [--token TOKEN]
   /opt/inoc-lab/inoc-lab-install.sh dns --url DOMINIO --apikey CHAVE [--api-url URL_DNS01]
   /opt/inoc-lab/inoc-lab-install.sh dns auth
   /opt/inoc-lab/inoc-lab-install.sh dns cleanup
+
+Por padrão, com --url + --apikey, o instalador tenta emitir o certificado via DNS-01 automaticamente.
 EOF
 }
 
@@ -76,6 +78,8 @@ install_main() {
   local install_url=""
   local install_apikey=""
   local install_api_url=""
+  local domain=""
+  local auto_dns="true"
 
   while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -90,6 +94,10 @@ install_main() {
       --api-url)
         install_api_url="${2:-}"
         shift 2
+        ;;
+      --skip-dns)
+        auto_dns="false"
+        shift
         ;;
       -h|--help)
         usage_main
@@ -116,7 +124,6 @@ install_main() {
       echo "Erro: arquivo base nao encontrado em $env_example_file"
       return 1
     fi
-    local domain
     domain="$(normalize_domain "$install_url")"
     if [[ -z "$domain" ]]; then
       echo "Erro: --url invalido."
@@ -181,9 +188,26 @@ EOUNIT
     else
       echo "Aviso: image-sync.sh nao encontrado em $target_root"
     fi
-    systemctl restart "$service_name" || true
   else
     echo "Aviso: systemctl nao encontrado. Instale/ative o servico manualmente."
+  fi
+
+  if [[ -n "$domain" && "$auto_dns" == "true" ]]; then
+    local dns_api_url="$install_api_url"
+    if [[ -z "$dns_api_url" ]]; then
+      dns_api_url="$(read_env_value "LAB_DNS01_API_URL")"
+    fi
+    if [[ -n "$dns_api_url" ]]; then
+      echo ">> Gerando certificado wildcard automaticamente (DNS-01)..."
+      dns_main --name "$domain" --api-url "$dns_api_url"
+    else
+      echo "Aviso: LAB_DNS01_API_URL nao informado; certificado nao foi gerado automaticamente."
+      echo "Defina --api-url (ou LAB_DNS01_API_URL no .env) para habilitar DNS-01 automatico."
+    fi
+  fi
+
+  if command -v systemctl >/dev/null 2>&1; then
+    systemctl restart "$service_name" || true
   fi
 
   return 0
