@@ -1,3 +1,9 @@
+# INOC Lab v6.1 — artefato independente
+
+O pacote `inoc-lab-linux-amd64.tar.gz` contém o binário independente, catálogo e instalador. `manifest.json` identifica o commit completo, runtime, API, schema e checksums. `install.sh` é entregue pelo controlador via HTTPS com token de pareamento. Esta versão está em validação no desenvolvimento; a matriz de homologação pertence ao branch v6.1 do INOCMON. Nenhuma publicação externa foi feita nesta intervenção.
+
+O diretório do host é `/opt/inoc-lab-agent/releases`, com links `current` e `previous`; estado e imagens ficam fora da release. O serviço é `inoc-lab.service`, porta padrão 3141. O binário legado abaixo permanece disponível para recuperação da versão anterior.
+
 # inoc-lab-project (lab-manager backend)
 
 Backend simples para orquestrar topologias KVM/virsh com **API Node.js** + **CLI local**.
