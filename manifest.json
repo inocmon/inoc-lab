@@ -14,11 +14,12 @@
     "scoped-flows-v1",
     "endpoint-traffic-v1",
     "host-traffic-endpoints-v1",
+    "host-traffic-mix-v2",
     "thin-overlay-reservation-v1"
   ],
   "optical_engine": "inoc-optical/1.1.0",
   "optical_physics": "planner-physics/1.0.0",
-  "source_commit": "3682affd127b7e028f2fa75f19a4ec2471d3e052",
+  "source_commit": "356e59d7275ccf1ec1da0554238ce8f4f4ef3aa7",
   "source_dirty": false,
   "node_version": "22.22.1",
   "platform": "linux",
@@ -29,13 +30,13 @@
     "catalog",
     "shared"
   ],
-  "built_at": "2026-09-07T20:16:41.022Z",
+  "built_at": "2026-09-07T22:19:17.571Z",
   "artifact": "inoc-lab-linux-amd64",
-  "sha256": "63e41e07a1bce1c719ffa42fe94d33e75311621c9532195e676a37ff6ce0f77e",
+  "sha256": "4aae2c58109883edd50f0964402e090b801a5858e77772f74367612992047bc1",
   "bytes": 126094528,
   "archive": "inoc-lab-linux-amd64.tar.gz",
-  "archive_sha256": "bc71808fc91cb3ab2c3ba4dd863a4ebd580d7c4aeb531776c3ad82d772feb712",
-  "archive_bytes": 42186855,
+  "archive_sha256": "a8eeffc38e5d9f3f9273c6d71358ae27bbf290caf6dd12ca00e372c488f8631b",
+  "archive_bytes": 42189069,
   "installer_sha256": "4a0c56a282476ba2ab1dd3cc56d4414cf57c4cc5d7e3a522580f839a8c3f7dce",
   "dependencies_lock_sha256": "9ce5bca60aec573179a3eeb019f4876c5cb7513d0ee274819f7c735f2954a593"
 }
