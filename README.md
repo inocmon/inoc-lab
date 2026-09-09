@@ -1,6 +1,8 @@
-# INOC Lab v6.1 — artefato independente
+# INOC Lab Agent 1.0 — artefato independente
 
-O pacote `inoc-lab-linux-amd64.tar.gz` contém o binário independente, catálogo e instalador. `manifest.json` identifica o commit completo, runtime, API, schema e checksums. `install.sh` é entregue pelo controlador via HTTPS com token de pareamento. Esta versão está em validação no desenvolvimento; a matriz de homologação pertence ao branch v6.1 do INOCMON. Nenhuma publicação externa foi feita nesta intervenção.
+O pacote `inoc-lab-linux-amd64.tar.gz` contém o binário independente, catálogo e instalador. `manifest.json` identifica a versão própria do agente, o commit completo, runtime, API, schema e checksums. `install.sh` é entregue pelo controlador com token de pareamento. A compatibilidade com o INOCMON é determinada pela API e pelas capacidades do manifesto, sem vincular o SemVer do agente ao SemVer da plataforma.
+
+Os tags históricos `inocmon6-release-v6.1.0-lab.N` continuam preservados para rollback. A partir desta linha, releases estáveis usam `inoc-lab-vMAJOR.MINOR.PATCH`.
 
 O diretório do host é `/opt/inoc-lab-agent/releases`, com links `current` e `previous`; estado e imagens ficam fora da release. O serviço é `inoc-lab.service`, porta padrão 3141. O binário legado abaixo permanece disponível para recuperação da versão anterior.
 
