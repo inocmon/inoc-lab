@@ -15,8 +15,8 @@ while [ "$#" -gt 0 ]; do
   esac
 done
 if [ "$(id -u)" -ne 0 ]; then echo 'Execute o instalador como root.' >&2; exit 1; fi
-if [[ ! "$controller" =~ ^https://[^[:space:]]+$ || ! "$server" =~ ^[a-f0-9-]{36}$ || ! "$token" =~ ^[a-f0-9]{64}$ ]]; then
-  echo 'Controlador HTTPS, servidor e token válidos são obrigatórios.' >&2; exit 2
+if [[ ! "$controller" =~ ^https?://[^[:space:]]+$ || ! "$server" =~ ^[a-f0-9-]{36}$ || ! "$token" =~ ^[a-f0-9]{64}$ ]]; then
+  echo 'Controlador, servidor e token válidos são obrigatórios.' >&2; exit 2
 fi
 if [ "$(uname -m)" != x86_64 ]; then echo 'Esta release requer Linux amd64.' >&2; exit 1; fi
 if ! command -v apt-get >/dev/null; then echo 'Esta versão do instalador requer Debian ou Ubuntu.' >&2; exit 1; fi
@@ -25,15 +25,28 @@ if ! command -v python3 >/dev/null || ! command -v curl >/dev/null; then
   apt-get update
   apt-get install -y python3 curl ca-certificates
 fi
+controller_scheme="$(python3 - "$controller" <<'PY'
+import ipaddress,sys,urllib.parse
+url=urllib.parse.urlsplit(sys.argv[1])
+if url.scheme not in ('http','https') or not url.hostname or url.username or url.password or url.query or url.fragment or url.path not in ('','/'):
+    raise SystemExit('Controlador inválido.')
+if url.scheme == 'http':
+    try: address=ipaddress.ip_address(url.hostname)
+    except ValueError: raise SystemExit('Controlador HTTP exige um IP privado literal.')
+    networks=[ipaddress.ip_network(value) for value in ('10.0.0.0/8','172.16.0.0/12','192.168.0.0/16','127.0.0.0/8','169.254.0.0/16','::1/128','fc00::/7','fe80::/10')]
+    if not any(address in network for network in networks): raise SystemExit('Controlador HTTP fora da rede privada.')
+print(url.scheme)
+PY
+)"
 stage="$(mktemp -d /var/tmp/inoc-lab-install.XXXXXXXX)"
 trap 'rm -rf -- "$stage"' EXIT
 printf 'header = "Authorization: Bearer %s"\n' "$token" > "$stage/curl.conf"
 printf '%s' "$token" > "$stage/token"
 unset token
 echo 'INOC Lab: verificando pareamento e release...'
-curl --fail --silent --show-error --proto '=https' --connect-timeout 10 --max-time 60 \
+curl --fail --silent --show-error --proto "=$controller_scheme" --connect-timeout 10 --max-time 60 \
   --config "$stage/curl.conf" "${controller%/}/inoc-lab/hosts/$server/bootstrap" -o "$stage/bootstrap.json"
-curl --fail --silent --show-error --proto '=https' --connect-timeout 10 --max-time 600 \
+curl --fail --silent --show-error --proto "=$controller_scheme" --connect-timeout 10 --max-time 600 \
   --config "$stage/curl.conf" "${controller%/}/inoc-lab/hosts/$server/release" -o "$stage/release.tar.gz"
 python3 - "$stage" <<'PY'
 import hashlib,json,pathlib,sys,tarfile

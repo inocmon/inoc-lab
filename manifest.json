@@ -18,11 +18,12 @@
     "thin-overlay-reservation-v1",
     "automatic-configuration-v1",
     "central-image-management-v1",
-    "image-dependency-tree-v1"
+    "image-dependency-tree-v1",
+    "trusted-lan-http-v1"
   ],
   "optical_engine": "inoc-optical/1.1.0",
   "optical_physics": "planner-physics/1.0.0",
-  "source_commit": "64bf1e1d11ab726e17d39984a2d18785ebeee8ee",
+  "source_commit": "75a64011fc2be50c6a0485be7decdb835a00abb9",
   "source_dirty": false,
   "node_version": "22.22.1",
   "platform": "linux",
@@ -33,13 +34,13 @@
     "catalog",
     "shared"
   ],
-  "built_at": "2026-09-09T16:06:12.592Z",
+  "built_at": "2026-09-09T16:57:46.573Z",
   "artifact": "inoc-lab-linux-amd64",
-  "sha256": "08dff5228b0b43a90db11a656d3138e97242f3af7c5cb4074656cc672f710213",
+  "sha256": "8b259a8e98fb0b6411e9e386556d1478b657c699af4673ade07a5b9232f5b9d3",
   "bytes": 126160064,
   "archive": "inoc-lab-linux-amd64.tar.gz",
-  "archive_sha256": "7b03398b9e10d58896fe40059fe3784cd8ef78c95884a9690e53bd91212095b9",
-  "archive_bytes": 42203816,
-  "installer_sha256": "4a0c56a282476ba2ab1dd3cc56d4414cf57c4cc5d7e3a522580f839a8c3f7dce",
+  "archive_sha256": "a67f7421531cd3d6115ff91f45a027e1d07ccc9a4f1db07032d6e7590823355a",
+  "archive_bytes": 42205169,
+  "installer_sha256": "b649cc6bacc1125d02b063c683869c2ae3ff7fed2f6873c10acc60b961cc6152",
   "dependencies_lock_sha256": "9ce5bca60aec573179a3eeb019f4876c5cb7513d0ee274819f7c735f2954a593"
 }
