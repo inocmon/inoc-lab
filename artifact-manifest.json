@@ -2,12 +2,12 @@
   "schema_version": 1,
   "artifact_repository": "inocmon/inoc-lab",
   "source_repository": "inocmon/inoc-lab-project",
-  "source_commit": "adf5cb767453d8d9367f1ae664b4bcf170d7477d",
+  "source_commit": "f25755f50bca32c50a89173b079c72954c502d2f",
   "publication_kind": "stable-release",
   "stable_artifact": {
-    "version": "1.0.1+adf5cb767453",
+    "version": "1.0.2+f25755f50bca",
     "path": "inoc-lab-linux-amd64.tar.gz",
-    "sha256": "5acd6ded60292d2c19cd4256fe166efd91c11cf2b8b07da6e29e1cf820af96f9"
+    "sha256": "595b2ef68f695740d99b5486afaf274803e5ee61384cc21c2acb45ddc6a469bc"
   },
   "legacy_release": "inocmon6-release-v6.1.0-lab.65",
   "legacy_artifact": "inoc-lab-manager"
