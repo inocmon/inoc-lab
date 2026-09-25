@@ -1,0 +1,1423 @@
+{
+    "schema_version": 1,
+    "source": "INOCMON DWDM Planner defaultGlobalLibrary",
+    "source_commit": "0846f66",
+    "library": [
+        {
+            "id": "TRP100GQPSK",
+            "category": "TRANSPONDER",
+            "type": "transponder",
+            "vendor": "generic",
+            "model": "TRP100GQPSK",
+            "display_name": "TRP100GQPSK",
+            "description": "Generic coherent 100G DP-QPSK DWDM transponder.",
+            "ports": {
+                "TX": {
+                    "direction": "out",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "RX": {
+                    "direction": "in",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                }
+            },
+            "specs": {
+                "tx_power_dbm": 0,
+                "rx_min_dbm": -18,
+                "rx_max_dbm": 0,
+                "osnr_min_db": 15,
+                "line_rate_gbps": 100,
+                "baud_rate_gbd": 32,
+                "rolloff_factor": 0.2,
+                "spectral_width_ghz": 38.4,
+                "modulation": "DP-QPSK",
+                "fec": "SD-FEC",
+                "dispersion_tolerance_ps_nm": 50000,
+                "tx_osnr_db": 58
+            },
+            "library_key": "global:TRANSPONDER:TRP100GQPSK",
+            "model_assumptions": [
+                "Dispersão máxima de 50000 ps/nm e OSNR TX de 58 dB são valores didáticos do Planner, não medições de hardware."
+            ]
+        },
+        {
+            "id": "TRP400G16QAM",
+            "category": "TRANSPONDER",
+            "type": "transponder",
+            "vendor": "generic",
+            "model": "TRP400G16QAM",
+            "display_name": "TRP400G16QAM",
+            "description": "Generic 400G 16QAM tunable DWDM transponder.",
+            "ports": {
+                "TX": {
+                    "direction": "out",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "RX": {
+                    "direction": "in",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                }
+            },
+            "specs": {
+                "tx_power_dbm": -2,
+                "rx_min_dbm": -14,
+                "rx_max_dbm": 1,
+                "osnr_min_db": 24,
+                "line_rate_gbps": 400,
+                "baud_rate_gbd": 64,
+                "rolloff_factor": 0.2,
+                "spectral_width_ghz": 76.8,
+                "modulation": "16QAM",
+                "fec": "SD-FEC",
+                "dispersion_tolerance_ps_nm": 50000,
+                "tx_osnr_db": 58
+            },
+            "library_key": "global:TRANSPONDER:TRP400G16QAM",
+            "model_assumptions": [
+                "Dispersão máxima de 50000 ps/nm e OSNR TX de 58 dB são valores didáticos do Planner, não medições de hardware."
+            ]
+        },
+        {
+            "id": "MLTRP4X100G",
+            "category": "TRANSPONDER",
+            "type": "multi_line_transponder",
+            "vendor": "generic",
+            "model": "MLTRP1TO40G",
+            "display_name": "Multi-line transponder 1-40 lines",
+            "description": "Generic configurable DWDM transponder with one to forty independent OTN line interfaces.",
+            "ports": {
+                "LINE1_TX": {
+                    "direction": "out",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "LINE1_RX": {
+                    "direction": "in",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "LINE2_TX": {
+                    "direction": "out",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "LINE2_RX": {
+                    "direction": "in",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "LINE3_TX": {
+                    "direction": "out",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "LINE3_RX": {
+                    "direction": "in",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "LINE4_TX": {
+                    "direction": "out",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                },
+                "LINE4_RX": {
+                    "direction": "in",
+                    "signal_policy": "single",
+                    "wavelength_mode": "tunable",
+                    "loss_db": 0
+                }
+            },
+            "specs": {
+                "line_count": 4,
+                "default_line_count": 4,
+                "max_line_count": 40,
+                "default_line_speed": "100G",
+                "tx_power_dbm": 0,
+                "rx_min_dbm": -18,
+                "rx_max_dbm": 0,
+                "osnr_min_db": 15,
+                "line_rate_gbps": 100,
+                "baud_rate_gbd": 32,
+                "rolloff_factor": 0.2,
+                "spectral_width_ghz": 38.4,
+                "modulation": "DP-QPSK",
+                "fec": "SD-FEC",
+                "dispersion_tolerance_ps_nm": 50000,
+                "tx_osnr_db": 58
+            },
+            "library_key": "global:TRANSPONDER:MLTRP4X100G",
+            "model_assumptions": [
+                "Dispersão máxima de 50000 ps/nm e OSNR TX de 58 dB são valores didáticos do Planner, não medições de hardware."
+            ]
+        },
+        {
+            "id": "MUX08CH",
+            "category": "MUX",
+            "type": "mux",
+            "vendor": "generic",
+            "model": "MUX08CH",
+            "display_name": "MUX08CH",
+            "description": "Generic 8 channel passive MUX.",
+            "ports": {
+                "COMMON OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 3
+                },
+                "C21IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 21,
+                    "supported_channels": [
+                        21
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                },
+                "C22IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 22,
+                    "supported_channels": [
+                        22
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                },
+                "C23IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 23,
+                    "supported_channels": [
+                        23
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                },
+                "C24IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 24,
+                    "supported_channels": [
+                        24
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                },
+                "C25IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 25,
+                    "supported_channels": [
+                        25
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                },
+                "C26IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 26,
+                    "supported_channels": [
+                        26
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                },
+                "C27IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 27,
+                    "supported_channels": [
+                        27
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                },
+                "C28IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 28,
+                    "supported_channels": [
+                        28
+                    ],
+                    "loss_db": 3,
+                    "direction": "in"
+                }
+            },
+            "specs": {
+                "insertion_loss_db": 3,
+                "max_channels": 8,
+                "channel_spacing_ghz": 100,
+                "passband_ripple_db": 0.4
+            },
+            "library_key": "global:MUX:MUX08CH"
+        },
+        {
+            "id": "MUX40CH",
+            "category": "MUX",
+            "type": "mux",
+            "vendor": "generic",
+            "model": "MUX40CH",
+            "display_name": "MUX40CH",
+            "description": "Generic 40 channel passive MUX.",
+            "ports": {
+                "COMMON OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 7
+                },
+                "C21IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 21,
+                    "supported_channels": [
+                        21
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C22IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 22,
+                    "supported_channels": [
+                        22
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C23IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 23,
+                    "supported_channels": [
+                        23
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C24IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 24,
+                    "supported_channels": [
+                        24
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C25IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 25,
+                    "supported_channels": [
+                        25
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C26IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 26,
+                    "supported_channels": [
+                        26
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C27IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 27,
+                    "supported_channels": [
+                        27
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C28IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 28,
+                    "supported_channels": [
+                        28
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C29IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 29,
+                    "supported_channels": [
+                        29
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C30IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 30,
+                    "supported_channels": [
+                        30
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C31IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 31,
+                    "supported_channels": [
+                        31
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C32IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 32,
+                    "supported_channels": [
+                        32
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C33IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 33,
+                    "supported_channels": [
+                        33
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C34IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 34,
+                    "supported_channels": [
+                        34
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C35IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 35,
+                    "supported_channels": [
+                        35
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C36IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 36,
+                    "supported_channels": [
+                        36
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C37IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 37,
+                    "supported_channels": [
+                        37
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C38IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 38,
+                    "supported_channels": [
+                        38
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C39IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 39,
+                    "supported_channels": [
+                        39
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C40IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 40,
+                    "supported_channels": [
+                        40
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C41IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 41,
+                    "supported_channels": [
+                        41
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C42IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 42,
+                    "supported_channels": [
+                        42
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C43IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 43,
+                    "supported_channels": [
+                        43
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C44IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 44,
+                    "supported_channels": [
+                        44
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C45IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 45,
+                    "supported_channels": [
+                        45
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C46IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 46,
+                    "supported_channels": [
+                        46
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C47IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 47,
+                    "supported_channels": [
+                        47
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C48IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 48,
+                    "supported_channels": [
+                        48
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C49IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 49,
+                    "supported_channels": [
+                        49
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C50IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 50,
+                    "supported_channels": [
+                        50
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C51IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 51,
+                    "supported_channels": [
+                        51
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C52IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 52,
+                    "supported_channels": [
+                        52
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C53IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 53,
+                    "supported_channels": [
+                        53
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C54IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 54,
+                    "supported_channels": [
+                        54
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C55IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 55,
+                    "supported_channels": [
+                        55
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C56IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 56,
+                    "supported_channels": [
+                        56
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C57IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 57,
+                    "supported_channels": [
+                        57
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C58IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 58,
+                    "supported_channels": [
+                        58
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C59IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 59,
+                    "supported_channels": [
+                        59
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                },
+                "C60IN": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 60,
+                    "supported_channels": [
+                        60
+                    ],
+                    "loss_db": 7,
+                    "direction": "in"
+                }
+            },
+            "specs": {
+                "insertion_loss_db": 7,
+                "max_channels": 40,
+                "channel_spacing_ghz": 100,
+                "passband_ripple_db": 0.7
+            },
+            "library_key": "global:MUX:MUX40CH"
+        },
+        {
+            "id": "DEMUX08CH",
+            "category": "DEMUX",
+            "type": "demux",
+            "vendor": "generic",
+            "model": "DEMUX08CH",
+            "display_name": "DEMUX08CH",
+            "description": "Generic 8 channel passive DEMUX.",
+            "ports": {
+                "COMMON IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 3
+                },
+                "C21OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 21,
+                    "supported_channels": [
+                        21
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                },
+                "C22OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 22,
+                    "supported_channels": [
+                        22
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                },
+                "C23OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 23,
+                    "supported_channels": [
+                        23
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                },
+                "C24OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 24,
+                    "supported_channels": [
+                        24
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                },
+                "C25OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 25,
+                    "supported_channels": [
+                        25
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                },
+                "C26OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 26,
+                    "supported_channels": [
+                        26
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                },
+                "C27OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 27,
+                    "supported_channels": [
+                        27
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                },
+                "C28OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 28,
+                    "supported_channels": [
+                        28
+                    ],
+                    "loss_db": 3,
+                    "direction": "out"
+                }
+            },
+            "specs": {
+                "insertion_loss_db": 3,
+                "max_channels": 8,
+                "channel_spacing_ghz": 100,
+                "passband_ripple_db": 0.4
+            },
+            "library_key": "global:DEMUX:DEMUX08CH"
+        },
+        {
+            "id": "DEMUX40CH",
+            "category": "DEMUX",
+            "type": "demux",
+            "vendor": "generic",
+            "model": "DEMUX40CH",
+            "display_name": "DEMUX40CH",
+            "description": "Generic 40 channel passive DEMUX.",
+            "ports": {
+                "COMMON IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 7
+                },
+                "C21OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 21,
+                    "supported_channels": [
+                        21
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C22OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 22,
+                    "supported_channels": [
+                        22
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C23OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 23,
+                    "supported_channels": [
+                        23
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C24OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 24,
+                    "supported_channels": [
+                        24
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C25OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 25,
+                    "supported_channels": [
+                        25
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C26OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 26,
+                    "supported_channels": [
+                        26
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C27OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 27,
+                    "supported_channels": [
+                        27
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C28OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 28,
+                    "supported_channels": [
+                        28
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C29OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 29,
+                    "supported_channels": [
+                        29
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C30OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 30,
+                    "supported_channels": [
+                        30
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C31OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 31,
+                    "supported_channels": [
+                        31
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C32OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 32,
+                    "supported_channels": [
+                        32
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C33OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 33,
+                    "supported_channels": [
+                        33
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C34OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 34,
+                    "supported_channels": [
+                        34
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C35OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 35,
+                    "supported_channels": [
+                        35
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C36OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 36,
+                    "supported_channels": [
+                        36
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C37OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 37,
+                    "supported_channels": [
+                        37
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C38OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 38,
+                    "supported_channels": [
+                        38
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C39OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 39,
+                    "supported_channels": [
+                        39
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C40OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 40,
+                    "supported_channels": [
+                        40
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C41OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 41,
+                    "supported_channels": [
+                        41
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C42OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 42,
+                    "supported_channels": [
+                        42
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C43OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 43,
+                    "supported_channels": [
+                        43
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C44OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 44,
+                    "supported_channels": [
+                        44
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C45OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 45,
+                    "supported_channels": [
+                        45
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C46OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 46,
+                    "supported_channels": [
+                        46
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C47OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 47,
+                    "supported_channels": [
+                        47
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C48OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 48,
+                    "supported_channels": [
+                        48
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C49OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 49,
+                    "supported_channels": [
+                        49
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C50OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 50,
+                    "supported_channels": [
+                        50
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C51OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 51,
+                    "supported_channels": [
+                        51
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C52OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 52,
+                    "supported_channels": [
+                        52
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C53OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 53,
+                    "supported_channels": [
+                        53
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C54OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 54,
+                    "supported_channels": [
+                        54
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C55OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 55,
+                    "supported_channels": [
+                        55
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C56OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 56,
+                    "supported_channels": [
+                        56
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C57OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 57,
+                    "supported_channels": [
+                        57
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C58OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 58,
+                    "supported_channels": [
+                        58
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C59OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 59,
+                    "supported_channels": [
+                        59
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                },
+                "C60OUT": {
+                    "signal_policy": "single",
+                    "wavelength_mode": "fixed",
+                    "fixed_channel": 60,
+                    "supported_channels": [
+                        60
+                    ],
+                    "loss_db": 7,
+                    "direction": "out"
+                }
+            },
+            "specs": {
+                "insertion_loss_db": 7,
+                "max_channels": 40,
+                "channel_spacing_ghz": 100,
+                "passband_ripple_db": 0.7
+            },
+            "library_key": "global:DEMUX:DEMUX40CH"
+        },
+        {
+            "id": "DCM80KM",
+            "category": "DCM",
+            "type": "dcm",
+            "vendor": "generic",
+            "model": "DCM80KM",
+            "display_name": "DCM80KM",
+            "description": "Generic 80 km dispersion compensation module.",
+            "ports": {
+                "IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 4
+                },
+                "OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 4
+                }
+            },
+            "specs": {
+                "insertion_loss_db": 4,
+                "compensation_km": 80,
+                "dispersion_compensation_ps_nm": -1360
+            },
+            "library_key": "global:DCM:DCM80KM"
+        },
+        {
+            "id": "EDFA21BOOSTER",
+            "category": "EDFA",
+            "type": "edfa",
+            "role": "booster",
+            "vendor": "generic",
+            "model": "EDFA21BOOSTER",
+            "display_name": "EDFA21BOOSTER",
+            "description": "Generic C-band EDFA booster.",
+            "ports": {
+                "IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                },
+                "OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                }
+            },
+            "specs": {
+                "gain_db": 21,
+                "noise_figure_db": 5.2,
+                "max_output_power_dbm": 20,
+                "min_input_power_dbm": -28,
+                "gain_tilt_db_per_thz": 0.25
+            },
+            "library_key": "global:EDFA:EDFA21BOOSTER"
+        },
+        {
+            "id": "EDFA20PREAMP",
+            "category": "EDFA",
+            "type": "edfa",
+            "role": "pre_amp",
+            "vendor": "generic",
+            "model": "EDFA20PREAMP",
+            "display_name": "EDFA20PREAMP",
+            "description": "Generic C-band EDFA pre-amplifier.",
+            "ports": {
+                "IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                },
+                "OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                }
+            },
+            "specs": {
+                "gain_db": 20,
+                "noise_figure_db": 4.8,
+                "max_output_power_dbm": 17,
+                "min_input_power_dbm": -32,
+                "gain_tilt_db_per_thz": 0.2
+            },
+            "library_key": "global:EDFA:EDFA20PREAMP"
+        },
+        {
+            "id": "RAMAN12GAIN",
+            "category": "RAMAN",
+            "type": "raman",
+            "vendor": "generic",
+            "model": "RAMAN12GAIN",
+            "display_name": "RAMAN12GAIN",
+            "description": "Generic distributed Raman amplifier.",
+            "ports": {
+                "LINE_IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                },
+                "LINE_OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                }
+            },
+            "specs": {
+                "gain_db": 12,
+                "noise_figure_db": 2.8,
+                "max_output_power_dbm": 18,
+                "gain_tilt_db_per_thz": 0.1
+            },
+            "library_key": "global:RAMAN:RAMAN12GAIN"
+        },
+        {
+            "id": "SPANSMF28",
+            "category": "FIBER_SPAN",
+            "type": "fiber_span",
+            "vendor": "generic",
+            "model": "SPANSMF28",
+            "display_name": "SPANSMF28",
+            "description": "Generic G.652.D SMF span. Distance is editable per deployed element.",
+            "ports": {
+                "SPAN A-B IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                },
+                "SPAN A-B OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                },
+                "SPAN B-A IN": {
+                    "direction": "in",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                },
+                "SPAN B-A OUT": {
+                    "direction": "out",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0
+                }
+            },
+            "specs": {
+                "distance_km": 80,
+                "attenuation_db_per_km": 0.22,
+                "attenuation_slope_db_per_km_nm": 0.00035,
+                "connector_loss_db": 0.5,
+                "splice_loss_db": 0.1,
+                "splice_count": 4,
+                "dispersion_ps_nm_km": 17,
+                "pmd_ps_sqrt_km": 0.08
+            },
+            "library_key": "global:FIBER_SPAN:SPANSMF28"
+        },
+        {
+            "id": "ODFPATCH02",
+            "category": "ODF",
+            "type": "patch",
+            "vendor": "generic",
+            "model": "ODFPATCH02",
+            "display_name": "ODFPATCH02",
+            "description": "Generic ODF or patch panel with connector loss.",
+            "ports": {
+                "A": {
+                    "direction": "bidirectional",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0.35
+                },
+                "B": {
+                    "direction": "bidirectional",
+                    "signal_policy": "multiple",
+                    "wavelength_mode": "any",
+                    "loss_db": 0.35
+                }
+            },
+            "specs": {
+                "insertion_loss_db": 0.35,
+                "return_loss_db": 45
+            },
+            "library_key": "global:ODF:ODFPATCH02"
+        }
+    ]
+}

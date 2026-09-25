@@ -1,6 +1,6 @@
 {
   "product": "inoc-lab",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "api_version": 2,
   "schema_version": 2,
   "features": [
@@ -10,6 +10,7 @@
     "config-lines-v1",
     "image-help-v1",
     "tutor-diagnostics-v1",
+    "routing-topology-v1",
     "interface-metrics-v1",
     "scoped-flows-v1",
     "endpoint-traffic-v1",
@@ -19,6 +20,7 @@
     "host-traffic-parallel-v1",
     "host-traffic-same-pair-v1",
     "thin-overlay-reservation-v1",
+    "configurable-capacity-limits-v1",
     "automatic-configuration-v1",
     "automatic-configuration-batch-v1",
     "central-image-management-v1",
@@ -30,7 +32,7 @@
   ],
   "optical_engine": "inoc-optical/1.1.0",
   "optical_physics": "planner-physics/1.0.0",
-  "source_commit": "e424d7577186386343d3bd3a102d8b234c6e9119",
+  "source_commit": "09fa9de83ad575f335b8fb61ec2ce8023deb4767",
   "source_dirty": false,
   "node_version": "22.22.1",
   "platform": "linux",
@@ -41,13 +43,13 @@
     "catalog",
     "shared"
   ],
-  "built_at": "2026-09-24T23:31:03.790Z",
+  "built_at": "2026-09-25T20:13:57.046Z",
   "artifact": "inoc-lab-linux-amd64",
-  "sha256": "157a500113df1701cf5bbf2882d9d031e1cbf7e8a57d03835fe150664d766baa",
+  "sha256": "50c93ccaf81dbe5206fb28d934a2403ab20cdc2aa7d8e5d392bb2889777f5cc2",
   "bytes": 126160064,
   "archive": "inoc-lab-linux-amd64.tar.gz",
-  "archive_sha256": "a407f52b117706098a266c9d79eb481f0c988ef853cd1af9ad578099f37afc86",
-  "archive_bytes": 42212299,
+  "archive_sha256": "cb2c0ca929668570eb12fda1e402584a0ecdc4a18dadb84bb28728f66cfb9073",
+  "archive_bytes": 42214303,
   "installer_sha256": "b649cc6bacc1125d02b063c683869c2ae3ff7fed2f6873c10acc60b961cc6152",
-  "dependencies_lock_sha256": "f12978f385923f9be0d2b65d9f0837a4c8ccf4a328ad3a9ca1f707cbe52bd93e"
+  "dependencies_lock_sha256": "2fc44ef0e8520587aea3826fcfe1e8b034f829c3fbd64d3ae6043a1d763dd7e4"
 }

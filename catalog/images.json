@@ -1,27 +1,52 @@
 {
   "huawei-ne40e-v800r011c00spc607b607": {
+    "student_help": {"name":"Huawei NE40E","manufacturer":"Huawei","version":"V800R011C00SPC607B607 · VRP 8.180","login_mode":"unknown","notes":"Use o console serial. As portas de dados deste perfil são Ethernet1/0/0 a Ethernet1/0/8. As credenciais da cópia instalada precisam ser confirmadas."},
     "vendor": "huawei",
     "path": "images/functional/huawei/NE40E-V800R011C00SPC607B607.qcow2",
     "memory": 1024,
     "vcpus": 1,
+    "overlay_reserve_mb": 1024,
     "download": {
       "url": "https://drive.google.com/file/d/11hDOepXInHMH6QZlECut7Pv-sDsl0JlF/view?usp=sharing",
       "sha256": "47af49f435d74edab10206c0a452e98b17b76606de17746738c006318ecf363b"
     }
   },
   "huawei-ar1000v-5.170": {
-    "vendor": "huawei",
+    "student_help": {"name":"Huawei AR1000V","manufacturer":"Huawei","version":"V300R019C00SPC300 · VRP 5.170","login_mode":"password","username":"admin","password":"inocmon@2026","notes":"Use o console serial. GigabitEthernet0/0/0 é reservada para gerenciamento; as portas de laboratório são GigabitEthernet0/0/1 a GigabitEthernet0/0/8. O Auto-Config inicial está desativado.","image_sha256":"2636df87e2475db42ed0689cad9f9894ffefdb5423f243a4883ddaf92446c4d5"},
+    "vendor": "huawei-ar1000v",
     "path": "images/functional/huawei/huawei-ar1000v-5.170.qcow2",
-    "memory": 1024,
-    "vcpus": 1
+    "memory": 2048,
+    "vcpus": 1,
+    "overlay_reserve_mb": 1024,
+    "sha256": "2636df87e2475db42ed0689cad9f9894ffefdb5423f243a4883ddaf92446c4d5",
+    "verification": "verified",
+    "capabilities": [
+      "console"
+    ],
+    "checks": [
+      "interface_description",
+      "interface_ip",
+      "interface_up",
+      "ping",
+      "ospf_neighbor",
+      "mpls_ldp_neighbor",
+      "config_lines"
+    ],
+    "verification_record": {
+      "date": "2026-09-07",
+      "agent": "manual QEMU/KVM qualification and automated agent tests",
+      "evidence": "docs/inoc-lab/homologacao.md"
+    }
   },
   "mikrotik-6.49.13": {
+    "student_help": {"name":"MikroTik RouterOS","manufacturer":"MikroTik","version":"6.49.13","login_mode":"unknown","notes":"Credenciais da cópia instalada ainda não confirmadas."},
     "vendor": "mikrotik",
     "path": "images/functional/mikrotik/mikrotik-6.49.13.qcow2",
     "memory": 64,
     "vcpus": 1
   },
   "mikrotik-7.21.2": {
+    "student_help": {"name":"MikroTik CHR","manufacturer":"MikroTik","version":"7.21.2","login_mode":"unknown","notes":"Esta imagem não é a variante pristine. Não presuma que possui a mesma senha inicial."},
     "vendor": "mikrotik",
     "path": "images/functional/mikrotik/mikrotik-chr-7.21.2.img",
     "memory": 64,
@@ -32,12 +57,15 @@
     }
   },
   "juniper-vrr-21.4R1.12": {
-    "vendor": "juniper",
+    "student_help": {"name":"Juniper vRR","manufacturer":"Juniper Networks","version":"Junos 21.4R1.12","login_mode":"unknown","notes":"Credenciais da cópia instalada ainda não confirmadas."},
+    "vendor": "juniper-vrr",
     "path": "images/functional/juniper/junos-x86-64-21.4R1.12.img",
-    "memory": 1024,
-    "vcpus": 1
+    "memory": 8192,
+    "vcpus": 2,
+    "sha256": "73a1ee6da4bfe86b88413859de4957ea8f51b248bb54e84a24b8d1a32ae668e1"
   },
   "nokia-sros-vsim": {
+    "student_help": {"name":"Nokia SR OS vSIM","manufacturer":"Nokia","version":"TiMOS 24.10.R2","login_mode":"unknown","notes":"Credenciais da cópia instalada ainda não confirmadas."},
     "vendor": "nokia",
     "path": "images/functional/nokia/sros-vsim-timos-b-24-10-r2.qcow2",
     "memory": 6144,
@@ -48,15 +76,81 @@
     }
   },
   "linux-debian12-minimal": {
+    "student_help": {"name":"Debian minimal","manufacturer":"Debian","version":"12","login_mode":"unknown","notes":"Credenciais dependem da preparação da imagem."},
     "vendor": "linux",
     "path": "images/functional/linux/debian12-minimal.qcow2",
     "memory": 512,
     "vcpus": 1
   },
   "linux-ubuntu2204": {
+    "student_help": {"name":"Ubuntu Server","manufacturer":"Canonical","version":"22.04","login_mode":"unknown","notes":"Credenciais dependem da preparação da imagem."},
     "vendor": "linux",
     "path": "images/functional/linux/ubuntu2204.qcow2",
     "memory": 1024,
     "vcpus": 1
+  },
+  "mikrotik-7.21.2-pristine": {
+    "student_help": {"name":"MikroTik CHR pristine","manufacturer":"MikroTik","version":"7.21.2","login_mode":"empty_password","username":"admin","notes":"No primeiro acesso, pressione Enter na senha e siga a solicitação de definição de senha. Um exercício preparado pode já ter alterado esse acesso.","image_sha256":"ac60fb3f6eca90a3bf316f44e372f9b22e02c219206ca44a634b35e766f5ee61"},
+    "vendor": "mikrotik",
+    "path": "images/functional/mikrotik/chr-7.21.2-pristine.img",
+    "memory": 256,
+    "vcpus": 1,
+    "sha256": "ac60fb3f6eca90a3bf316f44e372f9b22e02c219206ca44a634b35e766f5ee61",
+    "source_url": "https://download.mikrotik.com/routeros/7.21.2/chr-7.21.2.img.zip",
+    "verification": "verified",
+    "capabilities": [
+      "console"
+    ],
+    "checks": [
+      "interface_description",
+      "interface_ip",
+      "interface_up",
+      "ping",
+      "ospf_neighbor",
+      "mpls_ldp_neighbor",
+      "config_lines"
+    ],
+    "verification_record": {
+      "date": "2026-09-05",
+      "agent": "6.1.0+c9d8aef65926",
+      "evidence": "docs/inoc-lab/homologacao.md"
+    }
+  },
+  "cisco-xr-xrv9k-fullk9-x-6.5.2.qcow2": {
+    "student_help": {"name":"Cisco IOS XRv 9000","manufacturer":"Cisco","version":"IOS XR 6.5.2","login_mode":"unknown","notes":"A configuração inicial pode solicitar a criação do usuário. Credenciais desta cópia ainda não confirmadas."},
+    "vendor": "cisco-xrv9k",
+    "path": "images/functional/cisco-xr/xrv9k-fullk9-x-6.5.2.qcow2",
+    "memory": 16384,
+    "vcpus": 4,
+    "sha256": "d1b9178c38b22702e719cc898833cc281de50ae2f96afa75621c6a6ced9c0198",
+    "verification": "not_verified",
+    "capabilities": [
+      "console"
+    ],
+    "checks": []
+  },
+  "linux-debian12-minimal-inoc-fw.qcow2": {
+    "student_help": {"name":"Debian INOC endpoints","manufacturer":"Debian / INOC","version":"Debian 12 · INOC framework","login_mode":"unknown","notes":"O preparo do endpoint configura o acesso da instância. Não utilize credenciais administrativas do servidor de laboratórios."},
+    "vendor": "linux",
+    "path": "images/functional/linux/debian12-minimal-inoc-fw.qcow2",
+    "memory": 512,
+    "vcpus": 1,
+    "sha256": "756562d1af96f3c3e590898495e45eb5c9916c2deb454dc675062e06700316da",
+    "verification": "verified",
+    "capabilities": [
+      "console"
+    ],
+    "checks": [
+      "interface_description",
+      "interface_ip",
+      "interface_up",
+      "ping"
+    ],
+    "verification_record": {
+      "date": "2026-09-06",
+      "agent": "6.1.0+0070570383c0",
+      "operation_id": "b84ae1ad-4749-4f8c-bbbc-02b468a37a91",
+      "evidence": "docs/inoc-lab/homologacao.md"
+    }
   }
 }
