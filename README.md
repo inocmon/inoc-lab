@@ -350,3 +350,7 @@ Este README deve ser atualizado sempre que o comportamento do backend mudar (pla
 - `virt-install` e chamado em `libvirt.defineVM()`; qualquer parametro extra precisa ser inserido ali.
 - Nokia: precisa `rtc_base`, `qemu_uuid`, `smbios` e `virt_install_args` (ICH9-LPC hotplug off).
 - Para status em tempo real, o endpoint confiavel e `GET /topologies/:id/status`.
+
+## 1.1.5 — transições de configuração
+
+Confirma remoções dos peers antigos do AS10; antes de repetir remoções, consulta o bloco atual. Saltos explícitos repetidos só são aceitos quando a leitura confirma o mesmo caminho, ordem e semântica strict/loose. Não modifica rubricas nem reinicia VMs.
