@@ -354,3 +354,7 @@ Este README deve ser atualizado sempre que o comportamento do backend mudar (pla
 ## 1.1.5 — transições de configuração
 
 Confirma remoções dos peers antigos do AS10; antes de repetir remoções, consulta o bloco atual. Saltos explícitos repetidos só são aceitos quando a leitura confirma o mesmo caminho, ordem e semântica strict/loose. Não modifica rubricas nem reinicia VMs.
+
+## 1.1.6 — repetição de políticas BGP
+
+Distingue remoções de redes OSPF e BGP. Repetições de if-match de prefixos são aceitas somente após leitura confirmar a mesma cláusula de route-policy e o mesmo filtro. Corrige a regressão de escopo detectada na conferência final do lab 14.1.
