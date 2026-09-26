@@ -1,4 +1,4 @@
-# INOC Lab Agent 1.2.0-rc.2 — candidato em homologação
+# INOC Lab Agent 1.2.0 — artefato independente
 
 O pacote `inoc-lab-linux-amd64.tar.gz` contém o binário independente, catálogo e instalador. `manifest.json` identifica a versão própria do agente, o commit completo, runtime, API, schema e checksums. `install.sh` é entregue pelo controlador com token de pareamento. A compatibilidade com o INOCMON é determinada pela API e pelas capacidades do manifesto, sem vincular o SemVer do agente ao SemVer da plataforma.
 
