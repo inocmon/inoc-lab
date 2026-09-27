@@ -3,7 +3,7 @@
   "artifact_repository": "inocmon/inoc-lab",
   "source_repository": "inocmon/inoc-lab-project",
   "source_commit": "65e53316f6e1d3d6fde90b469e39c1e66eacb3ab",
-  "publication_kind": "candidate-release",
+  "publication_kind": "stable-release",
   "legacy_release": "inocmon6-release-v6.1.0-lab.65",
   "legacy_artifact": "inoc-lab-manager",
   "stable_artifact": {
