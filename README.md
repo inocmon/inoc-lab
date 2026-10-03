@@ -1,6 +1,6 @@
-# INOC Lab Agent 1.2.1 — artefato independente
+# INOC Lab Agent 1.2.2 — artefato candidato
 
-Release validada nas três rodadas de homologação de 27/09/2026. Build limpo do fonte `65e53316f6e1d3d6fde90b469e39c1e66eacb3ab`, com Node 22.22.1; 57 testes direcionados do agente aprovados. O binário foi executado no serviço QA separado, preservando o agente de produção. Publicar o artefato não comprova sua implantação. Os arquivos legados abaixo permanecem preservados.
+Candidato de correção do parser de vizinhos LDP no RouterOS. Build limpo do fonte `1fa21a46a6925326bdd8973bb700a3bc3dd06973` com Node 22.22.1; 14 testes focados aprovados e checksums do pacote verificados. Ainda não publicado nem instalado nos servidores KVM. Os arquivos legados abaixo permanecem preservados.
 
 O pacote `inoc-lab-linux-amd64.tar.gz` contém o binário independente, catálogo e instalador. `manifest.json` identifica a versão própria do agente, o commit completo, runtime, API, schema e checksums. `install.sh` é entregue pelo controlador com token de pareamento. A compatibilidade com o INOCMON é determinada pela API e pelas capacidades do manifesto, sem vincular o SemVer do agente ao SemVer da plataforma.
 
